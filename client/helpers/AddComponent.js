@@ -2,9 +2,23 @@
  * Created by netanel on 24/10/14.
  */
 Template.AddComponent.rendered = function() {
-  var myTextArea = this.find('textarea');
-  this.editor = CodeMirror.fromTextArea(myTextArea, {
+  var jsTextArea = this.find('#funcText');
+  this.editor = CodeMirror.fromTextArea(jsTextArea, {
     mode: 'javascript',
+    lineNumbers: true,
+    theme: 'ambiance'
+  });
+
+  var htmlTextArea = this.find('#htmlText');
+  this.htmlEditor = CodeMirror.fromTextArea(htmlTextArea, {
+    mode: 'text/html',
+    lineNumbers: true,
+    theme: 'ambiance'
+  });
+
+  var cssTextArea = this.find('#cssText');
+  this.htmlEditor = CodeMirror.fromTextArea(cssTextArea, {
+    mode: 'css',
     lineNumbers: true,
     theme: 'ambiance'
   });

@@ -9,6 +9,8 @@ Meteor.methods({
       funcText : 'console.log("me here");'
     });
 
+
+
     return true;
   }
-})
+});
