@@ -1,3 +1,36 @@
 <head>
   <title>InjectorJS</title>
 </head>
+
+<body>
+  <div ng-controller="MainCtrl">
+    <h1>Components</h1>
+
+    <ul>
+      <li ng-repeat="component in components">
+        <a href="/injector/[[component.user]]/][[component.name]]">[[component.user]]/[[component.name]]</a>
+      </li>
+    </ul>
+
+    <h1>Add Component</h1>
+    <div ng-controller="AddComponentCtrl">
+      <div>
+        <input type="text" placeholder="User" ng-model="newComponent.user">
+        <input type="text" placeholder="Name" ng-model="newComponent.name">
+      </div>
+      <h3>Dependencies:</h3>
+      <ul>
+          <li ng-repeat="dependency in newComponent.dependencies">[[dependency.user]]/[[dependency.name]] <button ng-click="removeDependency(dependency)">remove</button></li>
+      </ul>
+      <div>
+        <input ng-model="newDependency" type="text" placeholder="User/Name">
+        <button ng-click="addDependency(newDependency); newDependency = ''">Add</button>
+      </div>
+      <div class="text-entry">
+        <h3>Javascript</h3>
+        <textarea id="funcText"></textarea>
+        <button ng-click="saveComponent();">Save</button>
+      </div>
+    </div>
+  </div>
+</body>

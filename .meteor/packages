@@ -10,4 +10,6 @@ iron:router@1.0.0-pre4
 cfs:http-publish
 digioak:codemirror
 aldeed:collection2
+urigo:angular
+stevezhu:lodash
 
