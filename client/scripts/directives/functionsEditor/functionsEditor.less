@@ -1,0 +1,28 @@
+functions-editor {
+  .CodeMirror {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+
+    .CodeMirror-linewidget {
+      overflow: inherit;
+    }
+
+    #function-definition {
+      width: 100%;
+      color: purple;
+      padding-left: 4px;
+
+      input[type=text], .select2-choices {
+        border: none;
+        color: #000000;
+        background: transparent;
+      }
+
+      #dependency-selector {
+        width: 500px;
+      }
+    }
+  }
+}

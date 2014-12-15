@@ -3,13 +3,7 @@
  */
 Meteor.methods({
   'initDB' : function() {
-    components.insert({
-      user : 'netanel',
-      name : 'check',
-      funcText : 'console.log("me here");'
-    });
-
-
+    components.remove({});
 
     return true;
   }
