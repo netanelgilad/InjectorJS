@@ -1,0 +1,9 @@
+<div id="function-definition">
+  function <input type="text" auto-grow placeholder="name" ng-model="editedFunction.name"> arguments <input type="text" auto-grow ng-list ng-model="editedFunction.arguments" placeholder="arguments" /> uses
+  <ui-select multiple ng-model="editedFunction.dependencies" theme="select2" id="dependency-selector">
+    <ui-select-match placeholder="dependencies">{{$item.name}}</ui-select-match>
+    <ui-select-choices repeat="func.name as func in functions | filter:$select.search">
+      {{func.name}}
+    </ui-select-choices>
+  </ui-select>
+</div>

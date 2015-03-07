@@ -6,7 +6,7 @@ injector = angular.module('injector', [
   'vtortola.ng-terminal',
   'ui.select',
   'ui.router',
-  'ngAnimate'
+  'ngAnimate',
+  'ngTagsInput',
+  'angular-meteor'
 ]);
-
-angularMeteor.requires.push('injector');

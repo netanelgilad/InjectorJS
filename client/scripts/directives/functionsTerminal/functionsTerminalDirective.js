@@ -4,7 +4,7 @@
 injector.directive('functionsTerminal', function() {
   return {
     restrict : 'E',
-    templateUrl : 'directives/functionsTerminal.html',
+    templateUrl : 'client/scripts/directives/functionsTerminal/functionsTerminal.ng.html',
     controller : function ($scope) {
       $scope.$on('terminal-input', function (e, consoleInput) {
         var cmd = consoleInput[0];

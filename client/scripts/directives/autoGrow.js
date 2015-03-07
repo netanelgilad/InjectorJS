@@ -8,15 +8,20 @@ injector.directive('autoGrow', function() {
     scope : {
       model : '=ngModel'
     },
-    link : function (scope, element, attrs) {
-      scope.$watch('model', function(newValue) {
-        if (!newValue) {
+    link : function (scope, element, attrs, ngModel) {
+      scope.$watch('model', function() {
+        var size;
+        if (!ngModel.$viewValue) {
           if (attrs.placeholder) {
-            newValue = attrs.placeholder;
+            size = attrs.placeholder.length;
           }
         }
+        else {
+          size = ngModel.$viewValue.length;
+        }
 
-        element.attr('size', newValue.length);
+
+        element.attr('size', size);
       });
     }
   };

@@ -18,6 +18,29 @@ functions-editor {
         border: none;
         color: #000000;
         background: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      tags-input {
+        display: inline-block;
+
+        .host {
+          margin: 0;
+
+          .tags {
+            border: none;
+            background: none;
+            box-shadow: none;
+            padding: 0;
+
+            .input {
+              height: inherit;
+            }
+          }
+        }
       }
 
       #dependency-selector {

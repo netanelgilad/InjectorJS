@@ -1,9 +1,0 @@
-<template name="directives/functionsList.html">
-  <h1>Functions</h1>
-
-  <ul class="list-group">
-    <li ng-repeat="func in functions" class="list-group-item">
-      <a ui-sref="main.functions.edit({ functionName : func.name })">[[func.name]]</a>
-    </li>
-  </ul>
-</template>

@@ -3,16 +3,8 @@
 </head>
 
 <body>
-  <div id="page-container" ui-view>
+  <div ng-app="injector">
+    <div id="page-container" ui-view>
+    </div>
   </div>
 </body>
-
-<template name="main.html">
-  <div id="container">
-    <div id="left-column" class="column" ui-view="left-column">
-    </div>
-    <div id="right-column" class="column" ui-view="right-column">
-    </div>
-  </div>
-  <div id="footer" ui-view="footer"></div>
-</template>

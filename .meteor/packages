@@ -15,4 +15,9 @@ less
 nemo64:bootstrap
 mquandalle:bower
 ng-terminal-emulator
-urigo:angular-ui-router
+angularjs:angular-animate
+angular-ui-codemirror
+angular-ui-select
+ng-tags-input
+angularui:angular-ui-router
+natestrauser:select2

@@ -11,7 +11,7 @@ injector.config(function($locationProvider, $stateProvider, $urlRouterProvider) 
 
   $stateProvider.state('main', {
     abstract : true,
-    template : UiRouter.template('main.html')
+    templateUrl : 'client/main.ng.html'
   });
 
   $stateProvider.state('main.functions', {
@@ -19,7 +19,7 @@ injector.config(function($locationProvider, $stateProvider, $urlRouterProvider) 
     url : '/functions',
     views : {
       'left-column' : {
-        template : '<functions-list />'
+        template : '<functions-management-panel />'
       },
       'right-column' : {
         template : '<div ui-view />'
@@ -35,9 +35,7 @@ injector.config(function($locationProvider, $stateProvider, $urlRouterProvider) 
     template : '<functions-editor />',
     resolve : {
       'func' : function () {
-        return {
-          dependencies : []
-        };
+        return {};
       }
     },
     controller : function($scope, func) {

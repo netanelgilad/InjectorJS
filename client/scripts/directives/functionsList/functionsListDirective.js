@@ -4,7 +4,7 @@
 injector.directive('functionsList', function() {
   return {
     restrict : 'E',
-    templateUrl : 'directives/functionsList.html',
+    templateUrl : 'client/scripts/directives/functionsList/functionsList.ng.html',
     controller : function($scope, $collection) {
       $collection(functions).bind($scope, 'functions');
     }

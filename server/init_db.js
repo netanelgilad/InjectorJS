@@ -3,7 +3,7 @@
  */
 Meteor.methods({
   'initDB' : function() {
-    components.remove({});
+    functions.remove({});
 
     return true;
   }

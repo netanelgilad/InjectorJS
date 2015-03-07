@@ -5,10 +5,27 @@ functions.attachSchema(new SimpleSchema({
     type: String,
     label: "Name"
   },
+  arguments : {
+    type: [String],
+    label : "Arguments",
+    defaultValue : []
+  },
   dependencies: {
-    type: [String]
+    type: [String],
+    defaultValue: []
   },
   body : {
     type: String
   }
 }));
+
+
+Meteor.methods({
+  saveFunction : function(func) {
+    return functions.upsert({
+      name : func.name
+    }, {
+      $set : func
+    });
+  }
+});
